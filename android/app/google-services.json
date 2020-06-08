@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "45983977360",
+    "firebase_url": "https://phalanx-app-dev.firebaseio.com",
+    "project_id": "phalanx-app-dev",
+    "storage_bucket": "phalanx-app-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45983977360:android:c9b0c89dc375c08b792d15",
+        "android_client_info": {
+          "package_name": "com.phalanx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45983977360-5bv8r8kqj9u5b80kouoijc29vmej5vfg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.phalanx",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "45983977360-90uifuuvj4l3ns5c4jv3n5dsp6a8iu61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5LvjC0GFbAzqB0KCSjL8rxq5MCZuXwZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45983977360-90uifuuvj4l3ns5c4jv3n5dsp6a8iu61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

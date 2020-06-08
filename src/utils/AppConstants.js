@@ -1,0 +1,19 @@
+export default {
+    DASHBOARD_SCREEN: 'DASHBOARD_SCREEN',
+    GAME_ID_SCREEN: 'GAME_ID_SCREEN',
+
+    /* Firebase Table names */
+    USER_TABLE:"users",
+    LEADER_BOARD_TABLE:"leaderBoard",
+    USER_ANSWER_TABLE:"userAnswer",
+    QUESTION_TABLE:"question",
+    BADGES_TABLE:"badges",
+    USER_BADGES_TABLE:"userBadges",
+    
+    //ASYNC CONSTANTS
+    QUESTIONS_LIST:"QUESTIONS_LIST",
+    USER_DATA:"USER_DATA",
+    USER_GAME_DATA:"USER_GAME_DATA",
+    BADGES_DATA:"BADGES_DATA",
+    USER_BADGES_DATA:"USER_BADGES_DATA",
+  };
