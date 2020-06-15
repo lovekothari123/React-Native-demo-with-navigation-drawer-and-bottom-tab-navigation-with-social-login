@@ -2,11 +2,32 @@
 import {StyleSheet, Platform} from 'react-native';
 import Colors from '../utils/colors';
 import {Assets} from 'react-navigation-stack';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
+  backgroundImageHW: {
+    height: hp('100%'),
+    width: wp('100%'),
+  },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
   container: {
     flex: 1,
     flexDirection: 'row',
+  },
+  AppNameOnTop: {
+    fontSize: 30,
+    lineHeight: 30,
+    fontWeight: 'bold',
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
+    marginTop: '20%',
   },
 
   fullScreenCenterAllignl: {
@@ -188,7 +209,7 @@ export default StyleSheet.create({
   viewTextInputContainer: {
     borderWidth: 4,
     borderRadius: 6,
-    
+
     borderColor: Colors.inputBorder,
     backgroundColor: Colors.white,
     flexDirection: 'row',

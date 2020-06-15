@@ -66,7 +66,7 @@ function CustomDrawerContent(props) {
 const Drawer = createDrawerNavigator();
 
 //Drawer Navigator for the Navigation Drawer / Sidebar
-const MyDrawer = () => {
+const MyDrawer = (props) => {
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawerContent {...props} />}>
@@ -279,4 +279,4 @@ const localStyles = StyleSheet.create({
     marginVertical: 16,
   },
 });
-export {AppToolbar};
+export {AppToolbar, MyDrawer};

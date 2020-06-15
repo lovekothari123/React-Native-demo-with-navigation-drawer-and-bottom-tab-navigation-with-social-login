@@ -17,7 +17,7 @@ export default colors = {
   button_text_color:"#1F3A41",  
   gray_icon_color:"#A2A2A2",  
   input_lable_color:"#E4E9EA",  
-  status_bar:"#006794",  
+  status_bar:"rgba(0,0,0,0.85)",  
   error_background_color:"#D63247",  
   on_button_press_color:"#A1FBE4",
   battleShipGrey:'#686c80',
@@ -27,7 +27,7 @@ export default colors = {
   customDialogBtnColor:"#006991",
   gameSponsorColor:"#A4A9C7",
   question_bottom_gradient:"#009FC1",
-
+  termsAndConditionBK: '#363536',
   seperatorColor:"#86d9e7",
   crossIcon:'#00a7c8',
   correctText:'#75cc20',

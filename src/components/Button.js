@@ -1,65 +1,81 @@
 import React from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity, Text, Image, View} from 'react-native';
 import Color from '../utils/colors';
 import UtilStyles from '../utils/stylesCommon';
 
-
-const Button = ({onPress, children, isPressed, onPressIn, onPressOut,disabled,stylesOfEditButtionOnly}) => {
-
-console.log("bbutton is pressed "+ isPressed)
+export const LoginButton = ({
+  onPress,
+  children,
+  isPressed,
+  onPressIn,
+  onPressOut,
+  disabled,
+  source,
+}) => {
   return (
     <TouchableOpacity
-    activeOpacity={1}
-    onPress={onPress}
-    onPressIn={onPressIn}
-    onPressOut={onPressOut}
-    disabled={disabled}
+      onPress={onPress}
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
+      disabled={disabled}
+      style={localStyles.GooglePlusStyle}
+      activeOpacity={0.5}>
+      <View style={localStyles.centerImages}>
+      <Image source={source} style={localStyles.ImageIconStyle} />
+      <View style={localStyles.SeparatorLine} />
 
-      style={[
-        UtilStyles.shadowView,
-        !isPressed ? UtilStyles.buttonView: UtilStyles.buttonColorChangedView
-      ]}>
+      <Text style={localStyles.TextStyle}>{children}</Text>
+      </View>
       
-      <Text style={[stylesOfEditButtionOnly && stylesOfEditButtionOnly == true ? localStyles.buttonTextViewOnEditProfile:localStyles.buttonTextView]}>{children}</Text>
     </TouchableOpacity>
   );
 };
 
+
 const localStyles = StyleSheet.create({
-  buttonTextView: {
-    fontSize: 16,
-    color: Color.button_text_color,
-    fontFamily:'gothamBold',
-    textAlign:'center',
-    textTransform: 'uppercase',
-    justifyContent:'center',
-    alignContent:'center',
-    alignItems:'center'
+  centerImages: {
+    flexDirection: 'row',
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    
   },
-  buttonTextViewOnEditProfile: {
-    fontSize: 16,
-    color: Color.button_text_color,
-    fontFamily:'gothamBold',
-    textAlign:'center',
-    justifyContent:'center',
-    alignContent:'center',
-    alignItems:'center'
-   // textTransform: 'uppercase',
+  GooglePlusStyle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderWidth: 0.5,
+    borderColor: '#fff',
+    height: 48,
+    width: 300,
+    borderRadius: 30,
+    margin: 5,
+    textAlign: 'center',
+    
   },
-
+  ImageIconStyle: {
+    padding: 10,
+    margin: 5,
+    height: 25,
+    width: 25,
+    resizeMode: 'center',
+    marginBottom: 10,
+    
+  },
+  TextStyle: {
+    color: '#000',
+    marginBottom: 4,
+    textAlign:'center',
+    fontFamily: 'Roboto-Medium',
+  },
+  SeparatorLine: {
+    width: 4,
+    height: 40,
+  },
   
-
-  //   shadowView:{
-  //     shadowColor: "#000",
-  //     shadowOffset: {
-  //     width: 0,
-  //     height: 2,
-  // },
-  //   shadowOpacity: 0.25,
-  //   shadowRadius: 3.84,
-
-  //   elevation: 4,
-  //   }
 });
 
-export default Button;
+

@@ -26,8 +26,8 @@ import SignUpScreen from '../functionalComponent/LoginComponent';
 import DashBoardScreen from '../functionalComponent/DashBoardComponent';
 import LeaderBoardScreen from '../functionalComponent/LeaderboardComponent';
 import ProfileScreen from '../functionalComponent/ProfileComponent';
-// import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+
+
 
 const BottomNavigator = createMaterialBottomTabNavigator({
   DashBoard: {
@@ -198,12 +198,16 @@ const AppNavigator = createStackNavigator(
       navigationOptions: {
         header: null,
       },
+     
     },
+   
   },
   {
     headerMode: 'none',
     mode: Platform.OS === 'ios' ? 'modal' : 'card',
+    initialRouteParams: { transition: 'fade' },
     transitionConfig: TransitionConfiguration,
+    
   },
 );
 

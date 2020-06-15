@@ -26,6 +26,7 @@
     "react-native-keyboard-aware-scroll-view": "^0.9.1",
     "react-native-paper": "^3.10.1",
     "react-native-reanimated": "^1.9.0",
+    "react-native-responsive-screen": "^1.4.1",
     "react-native-safe-area-context": "^3.0.2",
     "react-native-safe-area-view": "^1.0.0",
     "react-native-screens": "^2.8.0",
@@ -53,5 +54,8 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "rnpm": {
+    "assets": ["./src/assets/fonts/RobotoFonts"]
+   }
 }

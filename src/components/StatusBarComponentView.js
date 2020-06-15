@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatusBar } from 'react-native'
+import { StatusBar, StyleSheet } from 'react-native'
 import Color from '../utils/colors';
 
 const StatusBarComponentView = props => {
@@ -10,6 +10,7 @@ const StatusBarComponentView = props => {
                 hidden={false}
                 backgroundColor={Color.status_bar}
                 barStyle="dark-content">
+                    
             </StatusBar>
     );
 }

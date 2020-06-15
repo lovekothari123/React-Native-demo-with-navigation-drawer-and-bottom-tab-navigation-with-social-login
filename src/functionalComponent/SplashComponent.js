@@ -4,26 +4,28 @@ import React, {useEffect} from 'react';
 import {
   StyleSheet,
   View,
-  Animated,
+  Text,
   Image,
   Easing,
   StatusBar,
+  ImageBackground,
 } from 'react-native';
 import NavigationService from '../navigation/NavigationService';
 import FullScreenComponent from '../utils/stylesCommon';
+import {SpleshScrenBKImg} from '../utils/ImagesPath';
 import StatusbarView from '../components/StatusBarComponentView';
 import {SafeAreaView} from 'react-navigation';
 import StringUtils from '../utils/strings';
 import {AsyncStorage} from 'react-native';
+import {ImageFullScreen} from '../components/ImageFullScreen'
 
 const SplashComponent = props => {
   useEffect(() => {
     const timer = setTimeout(() => {
       try {
-      
         _retrieveData();
       } catch (error) {
-        console.log("RROROROOR==>",error);
+        console.log('RROROROOR==>', error);
       }
     }, 2000);
     return () => clearTimeout(timer);
@@ -52,20 +54,11 @@ const SplashComponent = props => {
       const isUserLoggedIn = await AsyncStorage.getItem(
         StringUtils.LOGGED_IN_USER,
       );
-      const gameIDISENTERED = await AsyncStorage.getItem(
-        StringUtils.GAME_ID_ENTERED,
-      );
-
-      console.log('asynch is user logged in ' + isUserLoggedIn);
-      console.log('asynch is user gameIdEntered is ' + gameIDISENTERED);
 
       if (StringUtils.LOGGED_IN_USER !== isUserLoggedIn) {
         NavigationService.replace('Login', null);
         _storeData();
-      } else if (
-        StringUtils.GAME_ID_ENTERED === gameIDISENTERED &&
-        StringUtils.LOGGED_IN_USER === isUserLoggedIn
-      ) {
+      } else if (StringUtils.LOGGED_IN_USER === isUserLoggedIn) {
         NavigationService.replace('DashBoard', null);
       } else {
         NavigationService.navigate('gameId', null);
@@ -77,13 +70,8 @@ const SplashComponent = props => {
 
   return (
     <SafeAreaView style={FullScreenComponent.SafeAreaContainer}>
-      <View style={FullScreenComponent.fullScreenCenterAllignl}>
-        <StatusBar hidden />
-        <Image
-          style={localStyles.gifContainer}
-          source={require('../res/images/dashboardToolbarIcon_active.png')}
-        />
-      </View>
+      <StatusBar hidden />
+      <ImageFullScreen>{SpleshScrenBKImg}</ImageFullScreen>
     </SafeAreaView>
   );
 };
